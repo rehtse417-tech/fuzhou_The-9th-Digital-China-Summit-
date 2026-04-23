@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福州参展指南 · 参展手册</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+
+  :root {
+    --blue-dark:   #0a3d8f;
+    --blue-mid:    #1560c8;
+    --blue-light:  #3b82f6;
+    --blue-pale:   #dbeafe;
+    --blue-ghost:  #f0f6ff;
+    --accent:      #0ea5e9;
+    --red:         #ef4444;
+    --red-pale:    #fef2f2;
+    --green:       #16a34a;
+    --green-pale:  #f0fdf4;
+    --amber:       #d97706;
+    --amber-pale:  #fffbeb;
+    --text:        #0f172a;
+    --text-mid:    #374151;
+    --text-soft:   #6b7280;
+    --border:      #e2e8f0;
+    --white:       #ffffff;
+    --bg:          #f8fafc;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 60%, #1d76e8 100%);
+    padding: 40px 20px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 50%, rgba(255,255,255,0.07) 0%, transparent 50%),
+      radial-gradient(circle at 85% 20%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.9);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(20px, 5vw, 28px);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+  .hero-sub { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .hero-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.92);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12.5px;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+  }
+
+  .section { margin-top: 28px; }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .s-icon {
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    background: var(--blue-pale);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .section-head h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--blue-dark);
+    letter-spacing: 0.06em;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .card + .card { margin-top: 10px; }
+  .card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-row:last-child { border-bottom: none; }
+  .row-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-soft);
+    letter-spacing: 0.07em;
+    min-width: 68px;
+    text-align: right;
+    padding-top: 3px;
+    flex-shrink: 0;
+  }
+  .row-value { flex: 1; font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+
+  .event-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .event-card + .event-card { margin-top: 10px; }
+  .event-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .event-meta {
+    font-size: 12px;
+    color: var(--text-soft);
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .addr-box {
+    background: var(--blue-ghost);
+    border: 1px solid var(--blue-pale);
+    border-radius: 10px;
+    padding: 11px 14px;
+    margin-top: 6px;
+  }
+  .addr-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--blue-light);
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+  }
+  .addr-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .addr-text {
+    flex: 1;
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.55;
+    word-break: break-all;
+  }
+  .copy-btn {
+    flex-shrink: 0;
+    background: var(--blue-mid);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 13px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { background: var(--blue-dark); }
+  .copy-btn:active { transform: scale(0.96); }
+  .copy-btn.copied { background: var(--green); }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 9px;
+    border-radius: 5px;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+  }
+  .tag-blue  { background: var(--blue-pale); color: var(--blue-dark); }
+  .tag-red   { background: var(--red-pale); color: var(--red); }
+  .tag-green { background: var(--green-pale); color: var(--green); }
+  .tag-amber { background: var(--amber-pale); color: var(--amber); }
+
+  .transit { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+  .transit-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--text-soft);
+  }
+  .transit-dot {
+    width: 6px; height: 6px;
+    background: var(--blue-light);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .notice {
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.65;
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+  }
+  .notice-warn  { background: var(--red-pale); color: #b91c1c; border: 1px solid #fecaca; }
+  .notice-amber { background: var(--amber-pale); color: #92400e; border: 1px solid #fde68a; }
+  .notice-icon  { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  @media (max-width: 480px) { .role-grid { grid-template-columns: 1fr; } }
+  .role-tile {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 13px 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .role-name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .role-body { font-size: 12.5px; color: var(--text-soft); line-height: 1.6; }
+  .role-body strong { color: var(--text-mid); }
+
+  .meal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  @media (max-width: 460px) { .meal-grid { grid-template-columns: 1fr; } }
+  .meal-tile {
+    background: var(--blue-ghost);
+    border: 1px solid var(--blue-pale);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .meal-icon { font-size: 20px; }
+  .meal-label { font-size: 12px; color: var(--text-soft); }
+  .meal-amt { font-size: 20px; font-weight: 700; color: var(--blue-dark); line-height: 1; }
+  .meal-unit { font-size: 11px; color: var(--text-soft); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 10px;
+  }
+  .contact-tile {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .ct-role { font-size: 10.5px; font-weight: 600; color: var(--text-soft); letter-spacing: 0.06em; margin-bottom: 4px; }
+  .ct-name { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .ct-dept { font-size: 12px; color: var(--text-soft); margin-bottom: 8px; }
+  .ct-phone-row { display: flex; align-items: center; gap: 8px; }
+  .ct-num { font-size: 13px; color: var(--blue-mid); font-weight: 600; letter-spacing: 0.03em; flex: 1; }
+  .call-btn {
+    background: var(--blue-pale);
+    color: var(--blue-dark);
+    border: none;
+    border-radius: 7px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    transition: background 0.15s;
+    display: inline-block;
+  }
+  .call-btn:hover { background: #bfdbfe; }
+
+  .disc-list { list-style: none; }
+  .disc-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text-mid);
+  }
+  .disc-item:last-child { border-bottom: none; }
+  .disc-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--blue-pale);
+    color: var(--blue-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%) translateY(14px);
+    background: var(--green);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+    z-index: 999;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(22,163,74,0.35);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-soft);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">📘 参展手册</div>
+  <h1>2026 数字中国建设峰会</h1>
+  <div class="hero-sub">福州参展行程注意事项 · 上海出发</div>
+  <div class="hero-pills">
+    <div class="pill">📍 福州</div>
+    <div class="pill">📅 4月27–30日</div>
+    <div class="pill">✈️ 上海出发</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 展会地址 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">🗺️</div>
+      <h2>展会地址</h2>
+    </div>
+
+    <div class="event-card">
+      <div class="event-name">政企分论坛 · 智能云应用论坛</div>
+      <div class="event-meta">
+        <span>📅 4月28日 下午</span>
+        <span class="tag tag-red">报名已截止</span>
+      </div>
+      <div class="notice notice-amber" style="margin-top:0;margin-bottom:10px;">
+        <div class="notice-icon">🎫</div>
+        <div>入场需提前报名，请<strong>提前联系会务统筹</strong>获取通行证</div>
+      </div>
+      <div class="addr-box">
+        <div class="addr-label">📍 地址</div>
+        <div class="addr-row">
+          <div class="addr-text">
+            福州市仓山区潘墩路188号<br>
+            <span style="color:var(--text-soft);font-size:12px">福州闽江世纪金源会展中心大饭店 · 一层大宴会议厅</span>
+          </div>
+          <button class="copy-btn" onclick="doCopy('福州市仓山区潘墩路188号', this)">复制地址</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card" style="margin-top:10px">
+      <div class="event-name">成果展区参观 · 数字中国建设峰会</div>
+      <div class="event-meta">
+        <span class="tag tag-blue">30日前需小程序预约</span>
+        <span class="tag tag-green">30日后现场注册入场</span>
+      </div>
+      <div class="addr-box">
+        <div class="addr-label">📍 地址</div>
+        <div class="addr-row">
+          <div class="addr-text">
+            福州海峡国际会展中心<br>
+            <span style="color:var(--text-soft);font-size:12px">城门镇南江滨西大道198号</span>
+          </div>
+          <button class="copy-btn" onclick="doCopy('福州海峡国际会展中心，城门镇南江滨西大道198号', this)">复制地址</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 住宿信息 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">🏨</div>
+      <h2>住宿信息</h2>
+    </div>
+    <div class="card">
+      <div class="card-row">
+        <div class="row-label">指定酒店</div>
+        <div class="row-value">
+          <strong style="font-size:15px;color:var(--text)">福州艾美州际酒店</strong>
+          <div class="addr-box">
+            <div class="addr-label">📍 地址</div>
+            <div class="addr-row">
+              <div class="addr-text">仓山区城门镇福峡路1123号</div>
+              <button class="copy-btn" onclick="doCopy('福州艾美州际酒店，仓山区城门镇福峡路1123号', this)">复制地址</button>
+            </div>
+          </div>
+          <div class="transit">
+            <div class="transit-item"><div class="transit-dot"></div>到福州南站：约 1.5 公里（极近）</div>
+            <div class="transit-item"><div class="transit-dot"></div>到福州站：约 21 公里，车程 35–50 分钟</div>
+            <div class="transit-item"><div class="transit-dot"></div>到长乐国际机场：约 45 公里，车程 30–40 分钟</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="role-grid">
+      <div class="role-tile">
+        <div class="role-name" style="color:var(--blue-dark)">👔 工作人员</div>
+        <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong><br>垫付后报销</div>
+      </div>
+      <div class="role-tile">
+        <div class="role-name" style="color:var(--accent)">🤝 客户邀请参展人员</div>
+        <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong><br>垫付后报销</div>
+      </div>
+      <div class="role-tile">
+        <div class="role-name" style="color:var(--text-soft)">💳 自费陪同人员</div>
+        <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong><br>自行承担</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 餐饮标准 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">🍽️</div>
+      <h2>餐饮标准</h2>
+    </div>
+    <div class="card">
+      <div class="card-row">
+        <div class="row-label">渠道</div>
+        <div class="row-value">
+          <span class="tag tag-blue">客户关怀费</span>
+          <div style="margin-top:5px">不允许发生业务招待费，须通过客户关怀费渠道处理</div>
+          <div style="margin-top:3px;font-size:12.5px;color:var(--text-soft)">适用于：客户、展会工作人员</div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="row-label">餐标</div>
+        <div class="row-value">
+          <div class="meal-grid">
+            <div class="meal-tile">
+              <div class="meal-icon">🌤️</div>
+              <div>
+                <div class="meal-label">午餐</div>
+                <div class="meal-amt">250</div>
+                <div class="meal-unit">元 / 人 / 日</div>
+              </div>
+            </div>
+            <div class="meal-tile">
+              <div class="meal-icon">🌙</div>
+              <div>
+                <div class="meal-label">晚餐</div>
+                <div class="meal-amt">300</div>
+                <div class="meal-unit">元 / 人 / 日</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="row-label">报销流程</div>
+        <div class="row-value" style="font-size:13.5px">
+          员工 <strong>先行垫付</strong> → 凭票开具发票 → 交由办公室通过会务公司统一报销
+        </div>
+      </div>
+    </div>
+    <div class="notice notice-warn">
+      <div class="notice-icon">⚠️</div>
+      <div>
+        报销须严格对照已上报客户人数，<strong>客户邀请参展人员与自费陪同人员不包含在关怀费餐标中。</strong>。
+      </div>
+    </div>
+  </div>
+
+  <!-- 出行方式 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">✈️</div>
+      <h2>出行方式</h2>
+    </div>
+    <div class="card">
+      <div class="card-row">
+        <div class="row-label">工作人员及客户邀请参展人员</div>
+        <div class="row-value">
+          <span class="tag tag-blue">公务出差</span>
+          <div style="margin-top:5px">机票 + 酒店按标准报销，<strong>不含交通包干</strong></div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="row-label">自费人员</div>
+        <div class="row-value">
+          <span class="tag tag-green">公休</span>
+          <div style="margin-top:5px">以公休形式自行前往</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 用车 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">🚐</div>
+      <h2>用车安排</h2>
+    </div>
+    <div class="card">
+      <div class="card-row">
+        <div class="row-label">配备</div>
+        <div class="row-value">每位 BD 配备 <strong>1辆 7座商务车</strong></div>
+      </div>
+      <div class="card-row">
+        <div class="row-label">范围</div>
+        <div class="row-value"><span class="tag tag-red">仅限福州市内使用</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 纪律要求 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">📋</div>
+      <h2>纪律要求</h2>
+    </div>
+    <div class="card" style="padding:4px 18px">
+      <ul class="disc-list">
+        <li class="disc-item"><div class="disc-num">1</div><div>活动期间<strong>不得参加饮酒</strong>等娱乐活动</div></li>
+        <li class="disc-item"><div class="disc-num">2</div><div><strong>不参观</strong>需实名购票的景点</div></li>
+        <li class="disc-item"><div class="disc-num">3</div><div>务必注意<strong>人身安全</strong></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 联络人 -->
+  <div class="section">
+    <div class="section-head">
+      <div class="s-icon">📞</div>
+      <h2>展会期间联络人</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-tile">
+        <div class="ct-role">酒店事宜</div>
+        <div class="ct-name">周志杰</div>
+        <div class="ct-dept">办公室</div>
+        <div class="ct-phone-row">
+          <div class="ct-num">189-1858-8273</div>
+          <a class="call-btn" href="tel:18918588273">拨打</a>
+        </div>
+      </div>
+      <div class="contact-tile">
+        <div class="ct-role">会务统筹</div>
+        <div class="ct-name">邵娇娇</div>
+        <div class="ct-dept">营销处</div>
+        <div class="ct-phone-row">
+          <div class="ct-num">177-2106-7860</div>
+          <a class="call-btn" href="tel:17721067860">拨打</a>
+        </div>
+      </div>
+      <div class="contact-tile">
+        <div class="ct-role">会务统筹</div>
+        <div class="ct-name">唐琴</div>
+        <div class="ct-dept">营销处</div>
+        <div class="ct-phone-row">
+          <div class="ct-num">180-1907-1020</div>
+          <a class="call-btn" href="tel:18019071020">拨打</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  本手册根据会务通知整理 · 如有疑问请联系会务统筹
+</div>
+
+<div class="toast" id="toast">✓ 地址已复制到剪贴板</div>
+
+<script>
+function doCopy(text, btn) {
+  const orig = btn.textContent;
+  const ok = () => {
+    btn.textContent = '✓ 已复制';
+    btn.classList.add('copied');
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(ok).catch(() => fb(text, ok));
+  } else { fb(text, ok); }
+}
+function fb(text, cb) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  Object.assign(ta.style, { position:'fixed', opacity:'0' });
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
