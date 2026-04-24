@@ -2,487 +2,407 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>福州参展指南 · 参展手册</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap');
 
   :root {
-    --blue-dark:   #0a3d8f;
-    --blue-mid:    #1560c8;
-    --blue-light:  #3b82f6;
-    --blue-pale:   #dbeafe;
-    --blue-ghost:  #f0f6ff;
-    --accent:      #0ea5e9;
-    --red:         #ef4444;
-    --red-pale:    #fef2f2;
-    --green:       #16a34a;
-    --green-pale:  #f0fdf4;
-    --amber:       #d97706;
-    --amber-pale:  #fffbeb;
-    --text:        #0f172a;
-    --text-mid:    #374151;
-    --text-soft:   #6b7280;
-    --border:      #e2e8f0;
-    --white:       #ffffff;
-    --bg:          #f8fafc;
+    --blue-dark:  #0a3d8f;
+    --blue-mid:   #1560c8;
+    --blue-light: #3b82f6;
+    --blue-pale:  #dbeafe;
+    --blue-ghost: #f0f6ff;
+    --accent:     #0ea5e9;
+    --red:        #ef4444;
+    --red-pale:   #fef2f2;
+    --green:      #16a34a;
+    --green-pale: #f0fdf4;
+    --amber:      #d97706;
+    --amber-pale: #fffbeb;
+    --text:       #0f172a;
+    --text-mid:   #374151;
+    --text-soft:  #6b7280;
+    --border:     #e2e8f0;
+    --white:      #ffffff;
+    --bg:         #f1f5f9;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  html { font-size: 16px; }
 
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Noto Sans SC', -apple-system, sans-serif;
-    font-size: 14px;
-    line-height: 1.7;
+    font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
 
+  /* ── HERO ── */
   .hero {
-    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 60%, #1d76e8 100%);
-    padding: 40px 20px 36px;
+    background: linear-gradient(150deg, #0a3d8f 0%, #1560c8 55%, #1d76e8 100%);
+    padding: 36px 20px 28px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
-  .hero::before {
+  .hero::after {
     content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 15% 50%, rgba(255,255,255,0.07) 0%, transparent 50%),
-      radial-gradient(circle at 85% 20%, rgba(255,255,255,0.05) 0%, transparent 40%);
-    pointer-events: none;
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
   }
   .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: inline-block;
     background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.25);
     color: rgba(255,255,255,0.9);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 16px;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 14px;
   }
   .hero h1 {
     font-family: 'Noto Serif SC', serif;
-    font-size: clamp(20px, 5vw, 28px);
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.04em;
-    margin-bottom: 6px;
+    font-size: 22px; font-weight: 700;
+    color: #fff; letter-spacing: 0.04em; margin-bottom: 5px;
   }
-  .hero-sub { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .hero-sub { color: rgba(255,255,255,0.68); font-size: 13px; }
   .hero-pills {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    display: flex; justify-content: center;
+    gap: 7px; flex-wrap: wrap; margin-top: 16px;
   }
   .pill {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.92);
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 12.5px;
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: rgba(255,255,255,0.9);
+    padding: 5px 13px; border-radius: 20px; font-size: 12px;
   }
 
+  /* ── LAYOUT ── */
   .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 16px 60px;
+    max-width: 680px; margin: 0 auto;
+    padding: 0 12px 80px;
   }
 
-  .section { margin-top: 28px; }
+  /* ── SECTION ── */
+  .section { margin-top: 24px; }
   .section-head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
+    display: flex; align-items: center;
+    gap: 9px; margin-bottom: 10px; padding: 0 2px;
   }
   .s-icon {
-    width: 34px; height: 34px;
-    border-radius: 9px;
+    width: 32px; height: 32px; border-radius: 8px;
     background: var(--blue-pale);
     display: flex; align-items: center; justify-content: center;
-    font-size: 17px;
-    flex-shrink: 0;
+    font-size: 16px; flex-shrink: 0;
   }
   .section-head h2 {
     font-family: 'Noto Serif SC', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--blue-dark);
-    letter-spacing: 0.06em;
+    font-size: 15px; font-weight: 600;
+    color: var(--blue-dark); letter-spacing: 0.05em;
   }
 
+  /* ── CARD (stacked label/value on mobile) ── */
   .card {
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
-  .card + .card { margin-top: 10px; }
+  .card + .card { margin-top: 8px; }
+
+  /* Each row: label on top, value below */
   .card-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 14px 18px;
+    padding: 14px 16px;
     border-bottom: 1px solid var(--border);
   }
   .card-row:last-child { border-bottom: none; }
-  .row-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-soft);
-    letter-spacing: 0.07em;
-    min-width: 68px;
-    text-align: right;
-    padding-top: 3px;
-    flex-shrink: 0;
-  }
-  .row-value { flex: 1; font-size: 14px; color: var(--text-mid); line-height: 1.65; }
 
+  .row-label {
+    font-size: 10.5px; font-weight: 600;
+    color: var(--text-soft); letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 5px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .row-label::before {
+    content: '';
+    display: inline-block;
+    width: 3px; height: 11px;
+    background: var(--blue-light);
+    border-radius: 2px; flex-shrink: 0;
+  }
+  .row-value { font-size: 14.5px; color: var(--text-mid); line-height: 1.65; }
+
+  /* ── EVENT CARD ── */
   .event-card {
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    border-radius: 14px; padding: 15px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
-  .event-card + .event-card { margin-top: 10px; }
+  .event-card + .event-card { margin-top: 8px; }
   .event-name {
     font-family: 'Noto Serif SC', serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.4;
-    margin-bottom: 6px;
+    font-size: 15px; font-weight: 600;
+    color: var(--text); line-height: 1.4; margin-bottom: 6px;
   }
   .event-meta {
-    font-size: 12px;
-    color: var(--text-soft);
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 12px;
+    font-size: 12px; color: var(--text-soft);
+    display: flex; gap: 6px; flex-wrap: wrap;
+    align-items: center; margin-bottom: 10px;
   }
 
+  /* ── ADDRESS BOX ── */
   .addr-box {
     background: var(--blue-ghost);
     border: 1px solid var(--blue-pale);
-    border-radius: 10px;
-    padding: 11px 14px;
-    margin-top: 6px;
+    border-radius: 10px; padding: 12px 14px; margin-top: 6px;
   }
   .addr-label {
-    font-size: 10.5px;
-    font-weight: 600;
-    color: var(--blue-light);
-    letter-spacing: 0.08em;
-    margin-bottom: 5px;
-  }
-  .addr-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    font-size: 10px; font-weight: 600;
+    color: var(--blue-light); letter-spacing: 0.09em;
+    margin-bottom: 6px;
   }
   .addr-text {
-    flex: 1;
-    font-size: 13.5px;
-    color: var(--text);
-    line-height: 1.55;
+    font-size: 14px; color: var(--text);
+    line-height: 1.6; margin-bottom: 10px;
     word-break: break-all;
   }
+  /* Full-width copy button below address text on mobile */
   .copy-btn {
-    flex-shrink: 0;
-    background: var(--blue-mid);
-    color: #fff;
-    border: none;
-    border-radius: 7px;
-    padding: 6px 13px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-    font-family: inherit;
-    white-space: nowrap;
+    display: block; width: 100%;
+    background: var(--blue-mid); color: #fff;
+    border: none; border-radius: 9px;
+    padding: 10px 0; font-size: 14px; font-weight: 500;
+    cursor: pointer; font-family: inherit;
+    transition: background 0.15s; text-align: center;
+    min-height: 44px;
   }
-  .copy-btn:hover { background: var(--blue-dark); }
-  .copy-btn:active { transform: scale(0.96); }
+  .copy-btn:active { background: var(--blue-dark); }
   .copy-btn.copied { background: var(--green); }
 
+  /* ── TAGS ── */
   .tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 500;
-    padding: 2px 9px;
-    border-radius: 5px;
-    letter-spacing: 0.03em;
-    line-height: 1.6;
+    display: inline-block; font-size: 11px; font-weight: 500;
+    padding: 3px 10px; border-radius: 6px;
+    letter-spacing: 0.03em; line-height: 1.5;
   }
-  .tag-blue  { background: var(--blue-pale); color: var(--blue-dark); }
-  .tag-red   { background: var(--red-pale); color: var(--red); }
+  .tag-blue  { background: var(--blue-pale);  color: var(--blue-dark); }
+  .tag-red   { background: var(--red-pale);   color: var(--red); }
   .tag-green { background: var(--green-pale); color: var(--green); }
   .tag-amber { background: var(--amber-pale); color: var(--amber); }
 
-  .transit { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+  /* ── TRANSIT ── */
+  .transit { margin-top: 10px; display: flex; flex-direction: column; gap: 7px; }
   .transit-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12.5px;
-    color: var(--text-soft);
+    display: flex; align-items: flex-start; gap: 9px;
+    font-size: 13px; color: var(--text-soft);
   }
   .transit-dot {
-    width: 6px; height: 6px;
-    background: var(--blue-light);
-    border-radius: 50%;
-    flex-shrink: 0;
+    width: 7px; height: 7px; margin-top: 5px;
+    background: var(--blue-light); border-radius: 50%; flex-shrink: 0;
   }
 
+  /* ── NOTICES ── */
   .notice {
-    border-radius: 10px;
-    padding: 12px 15px;
-    margin-top: 10px;
-    font-size: 13px;
-    line-height: 1.65;
-    display: flex;
-    gap: 9px;
-    align-items: flex-start;
+    border-radius: 10px; padding: 12px 14px; margin-top: 10px;
+    font-size: 13.5px; line-height: 1.65;
+    display: flex; gap: 9px; align-items: flex-start;
   }
-  .notice-warn  { background: var(--red-pale); color: #b91c1c; border: 1px solid #fecaca; }
-  .notice-amber { background: var(--amber-pale); color: #92400e; border: 1px solid #fde68a; }
-  .notice-icon  { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+  .notice-warn  { background: var(--red-pale);   color: #b91c1c; border: 1px solid #fecaca; }
+  .notice-amber { background: var(--amber-pale);  color: #92400e; border: 1px solid #fde68a; }
+  .notice-icon  { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
 
+  /* ── ROLE GRID (住宿身份小卡片) — stacked on mobile ── */
   .role-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 10px;
+    display: flex; flex-direction: column; gap: 8px; margin-top: 10px;
   }
-  @media (max-width: 480px) { .role-grid { grid-template-columns: 1fr; } }
   .role-tile {
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 11px;
-    padding: 13px 14px;
+    border-radius: 12px; padding: 13px 15px;
+    display: flex; align-items: flex-start; gap: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  .role-name {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    margin-bottom: 6px;
+  .role-tile-icon {
+    font-size: 22px; flex-shrink: 0; margin-top: 1px;
   }
-  .role-body { font-size: 12.5px; color: var(--text-soft); line-height: 1.6; }
+  .role-tile-body {}
+  .role-name {
+    font-size: 13px; font-weight: 600; margin-bottom: 3px;
+  }
+  .role-body { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
   .role-body strong { color: var(--text-mid); }
 
-  /* ── Invoice block ── */
+  /* ── MEAL TILES ── */
+  .meal-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-top: 8px;
+  }
+  .meal-tile {
+    background: var(--blue-ghost); border: 1px solid var(--blue-pale);
+    border-radius: 10px; padding: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .meal-icon { font-size: 22px; }
+  .meal-label { font-size: 12px; color: var(--text-soft); margin-bottom: 1px; }
+  .meal-amt   { font-size: 22px; font-weight: 700; color: var(--blue-dark); line-height: 1; }
+  .meal-unit  { font-size: 11px; color: var(--text-soft); }
+
+  /* ── INVOICE BOX ── */
   .invoice-box {
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    margin-top: 10px;
-    overflow: hidden;
+    border-radius: 12px; overflow: hidden; margin-top: 10px;
   }
   .invoice-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 14px;
-    background: var(--blue-ghost);
-    border-bottom: 1px solid var(--blue-pale);
-    gap: 10px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 11px 14px;
+    background: var(--blue-ghost); border-bottom: 1px solid var(--blue-pale);
+    gap: 8px;
   }
   .invoice-title {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--blue-dark);
-    letter-spacing: 0.07em;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    font-size: 12px; font-weight: 600;
+    color: var(--blue-dark); display: flex; align-items: center; gap: 5px;
   }
   .copy-all-btn {
-    flex-shrink: 0;
-    background: var(--blue-mid);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 5px 12px;
-    font-size: 11.5px;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: inherit;
-    white-space: nowrap;
+    background: var(--blue-mid); color: #fff;
+    border: none; border-radius: 8px;
+    padding: 7px 14px; font-size: 12.5px; font-weight: 500;
+    cursor: pointer; font-family: inherit;
+    white-space: nowrap; min-height: 36px;
     transition: background 0.15s;
   }
-  .copy-all-btn:hover { background: var(--blue-dark); }
+  .copy-all-btn:active { background: var(--blue-dark); }
   .copy-all-btn.copied { background: var(--green); }
 
+  /* Each invoice field: label + value stacked, copy button full width */
   .invoice-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 14px;
+    padding: 11px 14px;
     border-bottom: 1px solid var(--border);
   }
   .invoice-row:last-child { border-bottom: none; }
   .inv-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-soft);
-    letter-spacing: 0.05em;
-    min-width: 52px;
-    flex-shrink: 0;
+    font-size: 10.5px; font-weight: 600;
+    color: var(--text-soft); letter-spacing: 0.07em;
+    margin-bottom: 3px;
   }
   .inv-value {
-    flex: 1;
-    font-size: 13px;
-    color: var(--text);
-    word-break: break-all;
-    line-height: 1.5;
+    font-size: 14.5px; color: var(--text);
+    line-height: 1.5; word-break: break-all;
+    margin-bottom: 8px;
   }
   .inv-copy {
-    flex-shrink: 0;
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--text-soft);
-    border-radius: 6px;
-    padding: 3px 10px;
-    font-size: 11px;
-    cursor: pointer;
-    font-family: inherit;
-    white-space: nowrap;
+    display: block; width: 100%;
+    background: none; border: 1px solid var(--border);
+    color: var(--text-soft); border-radius: 8px;
+    padding: 8px 0; font-size: 13px;
+    cursor: pointer; font-family: inherit;
+    text-align: center; min-height: 40px;
     transition: all 0.15s;
   }
-  .inv-copy:hover { border-color: var(--blue-light); color: var(--blue-mid); }
-  .inv-copy.copied { border-color: var(--green); color: var(--green); }
+  .inv-copy:active { border-color: var(--blue-light); color: var(--blue-mid); background: var(--blue-ghost); }
+  .inv-copy.copied { border-color: var(--green); color: var(--green); background: var(--green-pale); }
 
-  .meal-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 10px;
-  }
-  @media (max-width: 460px) { .meal-grid { grid-template-columns: 1fr; } }
-  .meal-tile {
-    background: var(--blue-ghost);
-    border: 1px solid var(--blue-pale);
-    border-radius: 10px;
-    padding: 12px 14px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .meal-icon { font-size: 20px; }
-  .meal-label { font-size: 12px; color: var(--text-soft); }
-  .meal-amt { font-size: 20px; font-weight: 700; color: var(--blue-dark); line-height: 1; }
-  .meal-unit { font-size: 11px; color: var(--text-soft); }
-
+  /* ── CONTACTS ── */
   .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 10px;
+    display: flex; flex-direction: column; gap: 8px;
   }
   .contact-tile {
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px 16px;
+    border-radius: 12px; padding: 14px 16px;
+    display: flex; align-items: center; gap: 14px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  .ct-role { font-size: 10.5px; font-weight: 600; color: var(--text-soft); letter-spacing: 0.06em; margin-bottom: 4px; }
-  .ct-name { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-  .ct-dept { font-size: 12px; color: var(--text-soft); margin-bottom: 8px; }
-  .ct-phone-row { display: flex; align-items: center; gap: 8px; }
-  .ct-num { font-size: 13px; color: var(--blue-mid); font-weight: 600; letter-spacing: 0.03em; flex: 1; }
-  .call-btn {
+  .ct-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
     background: var(--blue-pale);
-    color: var(--blue-dark);
-    border: none;
-    border-radius: 7px;
-    padding: 5px 12px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: inherit;
-    transition: background 0.15s;
-    display: inline-block;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
   }
-  .call-btn:hover { background: #bfdbfe; }
+  .ct-info { flex: 1; min-width: 0; }
+  .ct-role { font-size: 10.5px; font-weight: 600; color: var(--text-soft); letter-spacing: 0.05em; }
+  .ct-name { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.2; }
+  .ct-dept { font-size: 12px; color: var(--text-soft); }
+  .ct-num  { font-size: 13.5px; color: var(--blue-mid); font-weight: 600; letter-spacing: 0.03em; margin-top: 2px; }
+  .call-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px;
+    background: var(--blue-pale); color: var(--blue-dark);
+    border: none; border-radius: 50%;
+    font-size: 20px; cursor: pointer;
+    text-decoration: none; flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  .call-btn:active { background: #bfdbfe; }
 
-  .disc-list { list-style: none; }
+  /* ── DISCIPLINE ── */
+  .disc-list { list-style: none; padding: 0 4px; }
   .disc-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 11px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-    color: var(--text-mid);
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 13px 0; border-bottom: 1px solid var(--border);
+    font-size: 14.5px; color: var(--text-mid);
   }
   .disc-item:last-child { border-bottom: none; }
   .disc-num {
-    width: 22px; height: 22px;
-    border-radius: 50%;
-    background: var(--blue-pale);
-    color: var(--blue-dark);
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--blue-pale); color: var(--blue-dark);
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px;
-    font-weight: 700;
-    flex-shrink: 0;
-    margin-top: 2px;
+    font-size: 11.5px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
   }
 
+  /* ── TOAST ── */
   .toast {
-    position: fixed;
-    bottom: 28px; left: 50%;
+    position: fixed; bottom: 24px; left: 50%;
     transform: translateX(-50%) translateY(14px);
-    background: var(--green);
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    opacity: 0;
-    transition: all 0.25s ease;
-    pointer-events: none;
-    z-index: 999;
-    white-space: nowrap;
-    box-shadow: 0 4px 14px rgba(22,163,74,0.35);
+    background: var(--green); color: #fff;
+    padding: 10px 22px; border-radius: 24px;
+    font-size: 14px; font-weight: 500; opacity: 0;
+    transition: all 0.25s ease; pointer-events: none;
+    z-index: 999; white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(22,163,74,0.4);
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+  /* ── FOOTER ── */
   .footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: var(--text-soft);
-    border-top: 1px solid var(--border);
-    margin-top: 40px;
+    text-align: center; padding: 20px 16px;
+    font-size: 12px; color: var(--text-soft);
+    border-top: 1px solid var(--border); margin-top: 40px;
+  }
+
+  /* ── DESKTOP tweaks ── */
+  @media (min-width: 560px) {
+    .hero h1 { font-size: 26px; }
+    .role-grid { flex-direction: row; }
+    .role-tile { flex-direction: column; align-items: flex-start; }
+    .role-tile-icon { font-size: 26px; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); }
+    .contact-tile { flex-direction: column; align-items: flex-start; }
+    .ct-avatar { display: none; }
+    .call-btn { width: auto; height: auto; border-radius: 8px; padding: 7px 14px; font-size: 13px; }
+    .ct-phone-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+    .copy-btn { display: inline-block; width: auto; padding: 7px 14px; font-size: 12px; }
+    .addr-text { margin-bottom: 0; flex: 1; }
+    .addr-inner { display: flex; align-items: flex-start; gap: 10px; }
+    .inv-copy { display: inline-block; width: auto; padding: 5px 14px; }
+    .inv-row-inner { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .inv-value { margin-bottom: 0; flex: 1; }
   }
 </style>
 </head>
 <body>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-eyebrow">📘 参展手册</div>
-  <h1>2026 数字中国建设峰会</h1>
+  <h1>2025 数字中国建设峰会</h1>
   <div class="hero-sub">福州参展行程注意事项 · 上海出发</div>
   <div class="hero-pills">
     <div class="pill">📍 福州</div>
-    <div class="pill">📅 4月27–30日</div>
+    <div class="pill">📅 4月28–30日</div>
     <div class="pill">✈️ 上海出发</div>
   </div>
 </div>
@@ -508,31 +428,31 @@
       </div>
       <div class="addr-box">
         <div class="addr-label">📍 地址</div>
-        <div class="addr-row">
+        <div class="addr-inner">
           <div class="addr-text">
             福州市仓山区潘墩路188号<br>
-            <span style="color:var(--text-soft);font-size:12px">福州闽江世纪金源会展中心大饭店 · 一层大宴会议厅</span>
+            <span style="color:var(--text-soft);font-size:12.5px">福州闽江世纪金源会展中心大饭店 · 一层大宴会议厅</span>
           </div>
-          <button class="copy-btn" onclick="doCopy('福州市仓山区潘墩路188号', this)">复制地址</button>
         </div>
+        <button class="copy-btn" style="margin-top:10px" onclick="doCopy('福州市仓山区潘墩路188号', this)">📋 复制地址</button>
       </div>
     </div>
 
-    <div class="event-card" style="margin-top:10px">
+    <div class="event-card" style="margin-top:8px">
       <div class="event-name">成果展区参观 · 数字中国建设峰会</div>
       <div class="event-meta">
         <span class="tag tag-blue">30日前需小程序预约</span>
-        <span class="tag tag-green">30日后现场注册入场</span>
+        <span class="tag tag-green">30日后现场注册</span>
       </div>
       <div class="addr-box">
         <div class="addr-label">📍 地址</div>
-        <div class="addr-row">
+        <div class="addr-inner">
           <div class="addr-text">
             福州海峡国际会展中心<br>
-            <span style="color:var(--text-soft);font-size:12px">城门镇南江滨西大道198号</span>
+            <span style="color:var(--text-soft);font-size:12.5px">城门镇南江滨西大道198号</span>
           </div>
-          <button class="copy-btn" onclick="doCopy('福州海峡国际会展中心，城门镇南江滨西大道198号', this)">复制地址</button>
         </div>
+        <button class="copy-btn" style="margin-top:10px" onclick="doCopy('福州海峡国际会展中心，城门镇南江滨西大道198号', this)">📋 复制地址</button>
       </div>
     </div>
   </div>
@@ -547,34 +467,44 @@
       <div class="card-row">
         <div class="row-label">指定酒店</div>
         <div class="row-value">
-          <strong style="font-size:15px;color:var(--text)">福州艾美州际酒店</strong>
+          <strong style="font-size:16px;color:var(--text)">福州艾美州际酒店</strong>
           <div class="addr-box">
             <div class="addr-label">📍 地址</div>
-            <div class="addr-row">
+            <div class="addr-inner">
               <div class="addr-text">仓山区城门镇福峡路1123号</div>
-              <button class="copy-btn" onclick="doCopy('福州艾美州际酒店，仓山区城门镇福峡路1123号', this)">复制地址</button>
             </div>
+            <button class="copy-btn" style="margin-top:10px" onclick="doCopy('福州艾美州际酒店，仓山区城门镇福峡路1123号', this)">📋 复制地址</button>
           </div>
           <div class="transit">
-            <div class="transit-item"><div class="transit-dot"></div>到福州南站：约 1.5 公里（极近）</div>
-            <div class="transit-item"><div class="transit-dot"></div>到福州站：约 21 公里，车程 35–50 分钟</div>
-            <div class="transit-item"><div class="transit-dot"></div>到长乐国际机场：约 45 公里，车程 30–40 分钟</div>
+            <div class="transit-item"><div class="transit-dot"></div><span>到福州南站：约 1.5 公里（极近）</span></div>
+            <div class="transit-item"><div class="transit-dot"></div><span>到福州站：约 21 公里，车程 35–50 分钟</span></div>
+            <div class="transit-item"><div class="transit-dot"></div><span>到长乐国际机场：约 45 公里，车程 30–40 分钟</span></div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="role-grid">
       <div class="role-tile">
-        <div class="role-name" style="color:var(--blue-dark)">👔 工作人员</div>
-        <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong><br>垫付后报销</div>
+        <div class="role-tile-icon">👔</div>
+        <div class="role-tile-body">
+          <div class="role-name" style="color:var(--blue-dark)">工作人员</div>
+          <div class="role-body">前台签到，<strong>报姓名</strong>即可入住<br>发票按前期上报额度开具</div>
+        </div>
       </div>
       <div class="role-tile">
-        <div class="role-name" style="color:var(--accent)">🤝 客户邀请参展人员</div>
-        <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong><br>垫付后报销</div>
+        <div class="role-tile-icon">🤝</div>
+        <div class="role-tile-body">
+          <div class="role-name" style="color:var(--accent)">客户邀请参展人员</div>
+          <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong>，垫付后报销</div>
+        </div>
       </div>
       <div class="role-tile">
-        <div class="role-name" style="color:var(--text-soft)">💳 自费陪同人员</div>
-        <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong><br>自行承担</div>
+        <div class="role-tile-icon">💳</div>
+        <div class="role-tile-body">
+          <div class="role-name" style="color:var(--text-soft)">自费陪同人员</div>
+          <div class="role-body">已预订，<strong>报姓名</strong>入住<br><strong>450元/人/日</strong>，自行承担</div>
+        </div>
       </div>
     </div>
   </div>
@@ -590,8 +520,8 @@
         <div class="row-label">渠道</div>
         <div class="row-value">
           <span class="tag tag-blue">客户关怀费</span>
-          <div style="margin-top:5px">不允许发生业务招待费，须通过客户关怀费渠道处理</div>
-          <div style="margin-top:3px;font-size:12.5px;color:var(--text-soft)">适用于：客户、展会工作人员</div>
+          <div style="margin-top:6px;font-size:13.5px">不允许发生业务招待费，须通过客户关怀费渠道处理</div>
+          <div style="margin-top:3px;font-size:12px;color:var(--text-soft)">适用于：客户、展会工作人员</div>
         </div>
       </div>
       <div class="card-row">
@@ -600,27 +530,19 @@
           <div class="meal-grid">
             <div class="meal-tile">
               <div class="meal-icon">🌤️</div>
-              <div>
-                <div class="meal-label">午餐</div>
-                <div class="meal-amt">250</div>
-                <div class="meal-unit">元 / 人 / 日</div>
-              </div>
+              <div><div class="meal-label">午餐</div><div class="meal-amt">250</div><div class="meal-unit">元/人/日</div></div>
             </div>
             <div class="meal-tile">
               <div class="meal-icon">🌙</div>
-              <div>
-                <div class="meal-label">晚餐</div>
-                <div class="meal-amt">300</div>
-                <div class="meal-unit">元 / 人 / 日</div>
-              </div>
+              <div><div class="meal-label">晚餐</div><div class="meal-amt">300</div><div class="meal-unit">元/人/日</div></div>
             </div>
           </div>
         </div>
       </div>
       <div class="card-row">
         <div class="row-label">报销流程</div>
-        <div class="row-value" style="font-size:13.5px">
-          员工 <strong>先行垫付</strong> → 凭票开具发票 → 交由办公室通过会务公司统一报销
+        <div class="row-value" style="font-size:14px">
+          员工<strong>先行垫付</strong> → 凭票开具发票 → 交由办公室通过会务公司统一报销
         </div>
       </div>
       <div class="card-row">
@@ -629,37 +551,49 @@
           <div class="invoice-box">
             <div class="invoice-header">
               <div class="invoice-title">🧾 开票信息</div>
-              <button class="copy-all-btn" id="copyAllBtn" onclick="copyAll(this)">复制全部</button>
+              <button class="copy-all-btn" onclick="copyAll(this)">复制全部</button>
             </div>
             <div class="invoice-row">
               <div class="inv-label">抬头</div>
-              <div class="inv-value">上海启传锐博公关顾问有限公司</div>
-              <button class="inv-copy" onclick="doCopyInv('上海启传锐博公关顾问有限公司', this)">复制</button>
+              <div class="inv-row-inner">
+                <div class="inv-value">上海启传锐博公关顾问有限公司</div>
+                <button class="inv-copy" onclick="doCopyInv('上海启传锐博公关顾问有限公司', this)">复制</button>
+              </div>
             </div>
             <div class="invoice-row">
               <div class="inv-label">税号</div>
-              <div class="inv-value">91310108MA1G30KX7X</div>
-              <button class="inv-copy" onclick="doCopyInv('91310108MA1G30KX7X', this)">复制</button>
+              <div class="inv-row-inner">
+                <div class="inv-value">91310108MA1G30KX7X</div>
+                <button class="inv-copy" onclick="doCopyInv('91310108MA1G30KX7X', this)">复制</button>
+              </div>
             </div>
             <div class="invoice-row">
               <div class="inv-label">开户行</div>
-              <div class="inv-value">中国建设银行上海虹井路支行</div>
-              <button class="inv-copy" onclick="doCopyInv('中国建设银行上海虹井路支行', this)">复制</button>
+              <div class="inv-row-inner">
+                <div class="inv-value">中国建设银行上海虹井路支行</div>
+                <button class="inv-copy" onclick="doCopyInv('中国建设银行上海虹井路支行', this)">复制</button>
+              </div>
             </div>
             <div class="invoice-row">
               <div class="inv-label">账号</div>
-              <div class="inv-value">31050178600000000022</div>
-              <button class="inv-copy" onclick="doCopyInv('31050178600000000022', this)">复制</button>
+              <div class="inv-row-inner">
+                <div class="inv-value">31050178600000000022</div>
+                <button class="inv-copy" onclick="doCopyInv('31050178600000000022', this)">复制</button>
+              </div>
             </div>
             <div class="invoice-row">
               <div class="inv-label">地址</div>
-              <div class="inv-value">上海市虹梅路1535号星联科技园2号楼805</div>
-              <button class="inv-copy" onclick="doCopyInv('上海市虹梅路1535号星联科技园2号楼805', this)">复制</button>
+              <div class="inv-row-inner">
+                <div class="inv-value">上海市虹梅路1535号星联科技园2号楼805</div>
+                <button class="inv-copy" onclick="doCopyInv('上海市虹梅路1535号星联科技园2号楼805', this)">复制</button>
+              </div>
             </div>
             <div class="invoice-row">
               <div class="inv-label">电话</div>
-              <div class="inv-value">021-33199385</div>
-              <button class="inv-copy" onclick="doCopyInv('021-33199385', this)">复制</button>
+              <div class="inv-row-inner">
+                <div class="inv-value">021-33199385</div>
+                <button class="inv-copy" onclick="doCopyInv('021-33199385', this)">复制</button>
+              </div>
             </div>
           </div>
         </div>
@@ -667,9 +601,7 @@
     </div>
     <div class="notice notice-warn">
       <div class="notice-icon">⚠️</div>
-      <div>
-        报销须严格对照已上报客户人数，<strong>客户邀请参展人员与自费陪同人员不包含在关怀费餐标中。</strong>。
-      </div>
+      <div>报销须严格对照已上报客户人数，<strong>客户邀请参展人员与自费陪同人员不包含在关怀费餐标中</strong>。</div>
     </div>
   </div>
 
@@ -684,14 +616,14 @@
         <div class="row-label">工作人员及客户邀请参展人员</div>
         <div class="row-value">
           <span class="tag tag-blue">公务出差</span>
-          <div style="margin-top:5px">机票 + 酒店按标准报销，<strong>不含交通包干</strong></div>
+          <div style="margin-top:6px;font-size:14px">机票 + 酒店按标准报销，<strong>不含交通包干</strong></div>
         </div>
       </div>
       <div class="card-row">
         <div class="row-label">自费人员</div>
         <div class="row-value">
           <span class="tag tag-green">公休</span>
-          <div style="margin-top:5px">以公休形式自行前往</div>
+          <div style="margin-top:6px;font-size:14px">以公休形式自行前往</div>
         </div>
       </div>
     </div>
@@ -709,7 +641,7 @@
         <div class="row-value">每位 BD 配备 <strong>1辆 7座商务车</strong></div>
       </div>
       <div class="card-row">
-        <div class="row-label">范围</div>
+        <div class="row-label">使用范围</div>
         <div class="row-value"><span class="tag tag-red">仅限福州市内使用</span></div>
       </div>
     </div>
@@ -721,7 +653,7 @@
       <div class="s-icon">📋</div>
       <h2>纪律要求</h2>
     </div>
-    <div class="card" style="padding:4px 18px">
+    <div class="card" style="padding:4px 16px">
       <ul class="disc-list">
         <li class="disc-item"><div class="disc-num">1</div><div>活动期间<strong>不得参加饮酒</strong>等娱乐活动</div></li>
         <li class="disc-item"><div class="disc-num">2</div><div><strong>不参观</strong>需实名购票的景点</div></li>
@@ -738,42 +670,43 @@
     </div>
     <div class="contact-grid">
       <div class="contact-tile">
-        <div class="ct-role">酒店事宜</div>
-        <div class="ct-name">周志杰</div>
-        <div class="ct-dept">办公室</div>
-        <div class="ct-phone-row">
+        <div class="ct-avatar">👨‍💼</div>
+        <div class="ct-info">
+          <div class="ct-role">酒店事宜</div>
+          <div class="ct-name">周志杰</div>
+          <div class="ct-dept">办公室</div>
           <div class="ct-num">189-1858-8273</div>
-          <a class="call-btn" href="tel:18918588273">拨打</a>
         </div>
+        <a class="call-btn" href="tel:18918588273" title="拨打">📞</a>
       </div>
       <div class="contact-tile">
-        <div class="ct-role">会务统筹</div>
-        <div class="ct-name">邵娇娇</div>
-        <div class="ct-dept">营销处</div>
-        <div class="ct-phone-row">
+        <div class="ct-avatar">👩‍💼</div>
+        <div class="ct-info">
+          <div class="ct-role">会务统筹</div>
+          <div class="ct-name">邵娇娇</div>
+          <div class="ct-dept">营销处</div>
           <div class="ct-num">177-2106-7860</div>
-          <a class="call-btn" href="tel:17721067860">拨打</a>
         </div>
+        <a class="call-btn" href="tel:17721067860" title="拨打">📞</a>
       </div>
       <div class="contact-tile">
-        <div class="ct-role">会务统筹</div>
-        <div class="ct-name">唐琴</div>
-        <div class="ct-dept">营销处</div>
-        <div class="ct-phone-row">
+        <div class="ct-avatar">👩‍💼</div>
+        <div class="ct-info">
+          <div class="ct-role">会务统筹</div>
+          <div class="ct-name">唐琴</div>
+          <div class="ct-dept">营销处</div>
           <div class="ct-num">180-1907-1020</div>
-          <a class="call-btn" href="tel:18019071020">拨打</a>
         </div>
+        <a class="call-btn" href="tel:18019071020" title="拨打">📞</a>
       </div>
     </div>
   </div>
 
 </div>
 
-<div class="footer">
-  本手册根据会务通知整理 · 如有疑问请联系会务统筹
-</div>
+<div class="footer">本手册根据会务通知整理 · 如有疑问请联系会务统筹</div>
 
-<div class="toast" id="toast">✓ 地址已复制到剪贴板</div>
+<div class="toast" id="toast">✓ 已复制到剪贴板</div>
 
 <script>
 const INV_ALL = `抬头：上海启传锐博公关顾问有限公司
@@ -783,54 +716,51 @@ const INV_ALL = `抬头：上海启传锐博公关顾问有限公司
 地址：上海市虹梅路1535号星联科技园2号楼805
 电话：021-33199385`;
 
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
 function copyAll(btn) {
-  const orig = btn.textContent;
-  const ok = () => {
+  doClipboard(INV_ALL, () => {
+    const o = btn.textContent;
     btn.textContent = '✓ 已复制';
     btn.classList.add('copied');
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2000);
-    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2200);
-  };
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(INV_ALL).then(ok).catch(() => fb(INV_ALL, ok));
-  } else { fb(INV_ALL, ok); }
+    showToast();
+    setTimeout(() => { btn.textContent = o; btn.classList.remove('copied'); }, 2200);
+  });
 }
 
 function doCopyInv(text, btn) {
-  const orig = btn.textContent;
-  const ok = () => {
-    btn.textContent = '✓';
+  doClipboard(text, () => {
+    btn.textContent = '✓ 已复制';
     btn.classList.add('copied');
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2000);
-    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2200);
-  };
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(ok).catch(() => fb(text, ok));
-  } else { fb(text, ok); }
+    showToast();
+    setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 2200);
+  });
 }
 
 function doCopy(text, btn) {
-  const orig = btn.textContent;
-  const ok = () => {
+  doClipboard(text, () => {
+    const o = btn.textContent;
     btn.textContent = '✓ 已复制';
     btn.classList.add('copied');
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2000);
-    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
-  };
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(ok).catch(() => fb(text, ok));
-  } else { fb(text, ok); }
+    showToast();
+    setTimeout(() => { btn.textContent = o; btn.classList.remove('copied'); }, 2200);
+  });
 }
-function fb(text, cb) {
+
+function doClipboard(text, cb) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(cb).catch(() => fallback(text, cb));
+  } else { fallback(text, cb); }
+}
+
+function fallback(text, cb) {
   const ta = document.createElement('textarea');
   ta.value = text;
-  Object.assign(ta.style, { position:'fixed', opacity:'0' });
+  Object.assign(ta.style, { position:'fixed', opacity:'0', top:'0', left:'0' });
   document.body.appendChild(ta);
   ta.focus(); ta.select();
   try { document.execCommand('copy'); cb(); } catch(e) {}
