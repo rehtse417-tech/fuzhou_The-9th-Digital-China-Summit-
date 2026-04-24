@@ -286,6 +286,88 @@
   .role-body { font-size: 12.5px; color: var(--text-soft); line-height: 1.6; }
   .role-body strong { color: var(--text-mid); }
 
+  /* ── Invoice block ── */
+  .invoice-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .invoice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--blue-ghost);
+    border-bottom: 1px solid var(--blue-pale);
+    gap: 10px;
+  }
+  .invoice-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--blue-dark);
+    letter-spacing: 0.07em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .copy-all-btn {
+    flex-shrink: 0;
+    background: var(--blue-mid);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 11.5px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .copy-all-btn:hover { background: var(--blue-dark); }
+  .copy-all-btn.copied { background: var(--green); }
+
+  .invoice-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .invoice-row:last-child { border-bottom: none; }
+  .inv-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-soft);
+    letter-spacing: 0.05em;
+    min-width: 52px;
+    flex-shrink: 0;
+  }
+  .inv-value {
+    flex: 1;
+    font-size: 13px;
+    color: var(--text);
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .inv-copy {
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .inv-copy:hover { border-color: var(--blue-light); color: var(--blue-mid); }
+  .inv-copy.copied { border-color: var(--green); color: var(--green); }
+
   .meal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -541,6 +623,47 @@
           员工 <strong>先行垫付</strong> → 凭票开具发票 → 交由办公室通过会务公司统一报销
         </div>
       </div>
+      <div class="card-row">
+        <div class="row-label">发票抬头</div>
+        <div class="row-value">
+          <div class="invoice-box">
+            <div class="invoice-header">
+              <div class="invoice-title">🧾 开票信息</div>
+              <button class="copy-all-btn" id="copyAllBtn" onclick="copyAll(this)">复制全部</button>
+            </div>
+            <div class="invoice-row">
+              <div class="inv-label">抬头</div>
+              <div class="inv-value">上海启传锐博公关顾问有限公司</div>
+              <button class="inv-copy" onclick="doCopyInv('上海启传锐博公关顾问有限公司', this)">复制</button>
+            </div>
+            <div class="invoice-row">
+              <div class="inv-label">税号</div>
+              <div class="inv-value">91310108MA1G30KX7X</div>
+              <button class="inv-copy" onclick="doCopyInv('91310108MA1G30KX7X', this)">复制</button>
+            </div>
+            <div class="invoice-row">
+              <div class="inv-label">开户行</div>
+              <div class="inv-value">中国建设银行上海虹井路支行</div>
+              <button class="inv-copy" onclick="doCopyInv('中国建设银行上海虹井路支行', this)">复制</button>
+            </div>
+            <div class="invoice-row">
+              <div class="inv-label">账号</div>
+              <div class="inv-value">31050178600000000022</div>
+              <button class="inv-copy" onclick="doCopyInv('31050178600000000022', this)">复制</button>
+            </div>
+            <div class="invoice-row">
+              <div class="inv-label">地址</div>
+              <div class="inv-value">上海市虹梅路1535号星联科技园2号楼805</div>
+              <button class="inv-copy" onclick="doCopyInv('上海市虹梅路1535号星联科技园2号楼805', this)">复制</button>
+            </div>
+            <div class="invoice-row">
+              <div class="inv-label">电话</div>
+              <div class="inv-value">021-33199385</div>
+              <button class="inv-copy" onclick="doCopyInv('021-33199385', this)">复制</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="notice notice-warn">
       <div class="notice-icon">⚠️</div>
@@ -653,6 +776,43 @@
 <div class="toast" id="toast">✓ 地址已复制到剪贴板</div>
 
 <script>
+const INV_ALL = `抬头：上海启传锐博公关顾问有限公司
+税号：91310108MA1G30KX7X
+开户行：中国建设银行上海虹井路支行
+账号：31050178600000000022
+地址：上海市虹梅路1535号星联科技园2号楼805
+电话：021-33199385`;
+
+function copyAll(btn) {
+  const orig = btn.textContent;
+  const ok = () => {
+    btn.textContent = '✓ 已复制';
+    btn.classList.add('copied');
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2200);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(INV_ALL).then(ok).catch(() => fb(INV_ALL, ok));
+  } else { fb(INV_ALL, ok); }
+}
+
+function doCopyInv(text, btn) {
+  const orig = btn.textContent;
+  const ok = () => {
+    btn.textContent = '✓';
+    btn.classList.add('copied');
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2200);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(ok).catch(() => fb(text, ok));
+  } else { fb(text, ok); }
+}
+
 function doCopy(text, btn) {
   const orig = btn.textContent;
   const ok = () => {
